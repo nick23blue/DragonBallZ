@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--
+   Dragon Ball Z Homepage
+   Author: Nicholas Lee
+   Date: 4/23/2020
+   
+   Filename:DBZ_reviews.html
+  -->
+  <title>Lee:Assign5</title>
+  <meta charset="utf-8">
+  <link href="styles.css" rel="stylesheet">
+  <script src = "script.js"></script>
+ </head>
+ <body>
+     <header>
+	     <h1><img src="Lee_logo.png" alt = "Dragon Ball Z" /></h1>
+		  <img src="DBZlogo.jpg" alt= "Dragon Ball Z" />
+		  <h1>Its' over 9000</h1>
+	 </header>
+	 <nav>
+	     <a href="index.html">Home</a>
+	     <a href="actors.html">Actors</a>
+	     <a href="episodes.html">Episodes</a>
+	     <a href="reviews.html">Reviews</a>
+		 
+	 </nav>
+	 <main>
+	    <h2>Review an Episode</h2>
+		
+		<form method="get" action="formprocessor.html" id = "reviewForm">
+		    <fieldset>
+			    <legend>Reviewer's Information</legend>
+			   <label for="field1">Name*</label>
+			   <input type="text" name="regname" id="field1">
+			   <label for="field2">Email</label>
+			   <input type="email" name="regemail" id="field2">
+			   
+			   
+			   <label for="field3">Age</label>
+			   <input type="number" name="regage" id="field3" min=
+			   "1" max= "97">
+			   <p>Gender</p>
+			   <div id="gender">
+			   <input type="radio" name="reggender" id="field4" value
+			   ="Male">
+			   <label for="field4">Male</label>
+			   
+			   <input type="radio" name="reggender" id="field5" value
+			   ="female">
+			   <label for="field5">Female</label><br>
+			   
+			   <input type="radio" name="reggender" id="field6" value
+			   ="N/A">
+			   <label for="field6">Perfer Not To Answer</label>
+			   
+			   <input type="radio" name="reggender" id="field7" value
+			   ="Other">
+			   <label for="field7">Other</label>
+			   
+			   </div><br>
+			   </fieldset>
+			   
+			   <fieldset>
+			        <legend>Favorites From Dragon Ball Z</legend>
+				    <label for="field8">Favorite Character</label>
+					<select name="character" id="field8">
+					<option value= "">&nbsp;</option>
+					<option value="Goku">Goku</option>
+					<option value="Vegeta">Vegeta</option>
+					<option value="Piccolo">Piccolo</option>
+					<option value="Gohan">Gohan</option>
+					<option value="Tien">Tien</option>
+					<option value="Krillin">Krillin</option>
+					<option value="Frieza">Frieza</option>
+					</select>
+					
+				
+					<p>Favorite Foods</p>
+					<div id="foods">
+					
+					<input type="checkbox" value="yes" id="field9" checked />
+					<label for="field9">Chips</label>
+					<input type="checkbox" value="yes" id="field10" checked />
+					<label for="field10">Soda</label><br>
+					<input type="checkbox" value="yes" id="field11"  />
+					<label for="field11">Fruit</label>
+					<input type="checkbox" value="yes" id="field12" />
+					<label for="field12">Candy</label><br>
+					<input type="checkbox" value="yes" id="field13" />
+					<label for="field13">Hot Dog</label>
+					<input type="checkbox" value="yes" id="field14" />
+					<label for="field14">Fries</label>
+					
+					</div><br>
+			  </fieldset>
+			  
+			  <fieldset>
+			  <legend>Episode Information</legend>
+			  <label for="field15">Episode Title</label>
+			  <input type="text" name="episTitle" id="field15">
+			  
+			  <label for="field16">When did you see the episode?</label>
+			  <input type="date" name="episDate" id="field16">
+			  
+			  <label for="field17">Rate the Episode</label>
+			  <input type="range" name="episRate" id="field17" value="1" step="0.5" min="1" max="5">
+			  
+			  <label for="field18">Write Your Review</label>
+			  <textarea name="EpisReview" id="field18"></textarea>
+			  </fieldset>
+			  
+			  <div id="buttons">
+			  <input type="submit" value="Send Review" />
+			  
+		 </div>
+		 </form>
+		 </main>
+		 <script>
+		 var reviewform = document.getElementById("reviewForm");
+	  reviewform.addEventListener("submit", reviews);
+	  </script>
+		 
+	<footer>
+		&copy; 2020 &mdash; Dragon Ball Z  <br>
+		<a href="mailto:nl02343@georgiasouthern.edu">Contact Me!</a>
+	</footer>
